@@ -19,7 +19,7 @@ const router=createRouter({
         },
         {
             // path:'/teams/:teamId',components:TeamList
-            path:'/teams/:teamId',component:TeamMembers
+            path:'/teams/:teamId',component:TeamMembers,props:true
         },
     ], 
 });
