@@ -11,8 +11,11 @@ import TeamMembers from './components/teams/TeamMembers.vue'
 const router=createRouter({
     history:createWebHistory(),
     routes:[
+        // {
+        //     path:'/',redirect:'/teams'
+        // },
         {
-            path:'/teams',component:TeamList
+            path:'/teams',component:TeamList,alias:"/"
         },
         {
             path:'/users',component:UserList
@@ -20,6 +23,10 @@ const router=createRouter({
         {
             // path:'/teams/:teamId',components:TeamList
             path:'/teams/:teamId',component:TeamMembers,props:true
+        },
+        {
+            // path:'/teams/:teamId',components:TeamList
+            path:'/:notFound(.*)',redirect:'/teams'
         },
     ], 
 });
