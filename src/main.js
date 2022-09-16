@@ -6,6 +6,7 @@ import App from './App.vue';
 import UserList from './components/users/UsersList.vue'
 
 import TeamList from './components/teams/TeamsList.vue'
+import TeamMembers from './components/teams/TeamMembers.vue'
 
 const router=createRouter({
     history:createWebHistory(),
@@ -15,6 +16,10 @@ const router=createRouter({
         },
         {
             path:'/users',component:UserList
+        },
+        {
+            // path:'/teams/:teamId',components:TeamList
+            path:'/teams/:teamId',component:TeamMembers
         },
     ], 
 });
